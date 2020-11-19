@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  api: 'https://om-web-rest-api.herokuapp.com/api',
+  paypalClientId: 'AQhGcP398wLo0G9LITxunNP1yNpRlDec_rTS_pnzo2ielPC3ey22umHiC0KMOft7ae2mefhzrlxcpxRx'
 };
 
 /*
