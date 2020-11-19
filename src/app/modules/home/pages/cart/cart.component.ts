@@ -96,11 +96,13 @@ export class CartComponent implements OnInit {
             console.log('onApprove - transaction was approved, but not authorized', data, actions);
             actions.order.get().then(details => {
                 console.log('onApprove - you can get full order details inside onApprove: ', details);
+                this.cartService.clearCart();
             });
 
         },
         onClientAuthorization: (data) => {
             console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
+            this.cartService.clearCart();
             //this.showSuccess = true;
         },
         onCancel: (data, actions) => {
